@@ -13,7 +13,7 @@ namespace Azirel
 		private HashSet<Collider> inMomentTrack = new();
 		private List<Collider> traversalTrack = new();
 
-		public void OnTriggerEnter(Collider other)
+		private void OnTriggerEnter(Collider other)
 		{
 			if (((1 << other.gameObject.layer) & collidersMask.value) != 0)
 			{
@@ -22,7 +22,7 @@ namespace Azirel
 			}
 		}
 
-		public void OnTriggerExit(Collider other)
+		private void OnTriggerExit(Collider other)
 		{
 			if (((1 << other.gameObject.layer) & collidersMask.value) != 0)
 			{

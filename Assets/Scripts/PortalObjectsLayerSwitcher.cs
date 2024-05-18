@@ -5,21 +5,19 @@ namespace Azirel
 {
 	public class PortalObjectsLayerSwitcher : MonoBehaviour
 	{
-		public LayerMask LayerMask;
-		public List<GameObject> insidePortalObjects = new List<GameObject>();
-		public int layerWhenInside;
-		public int layerWhenOutside;
+		[SerializeField] private List<GameObject> insidePortalObjects = new List<GameObject>();
+		[SerializeField] private int layerWhenInside;
+		[SerializeField] private int layerWhenOutside;
 
 		private bool isInPortal = false;
 
-		[ContextMenu(nameof(ToggleSceneState))]
-		public void ToggleSceneState()
+		private void ToggleSceneState()
 		{
 			isInPortal = !isInPortal;
 			ChangeInsidePortalObjectsLayer(isInPortal);
 		}
 
-		public void ChangeInsidePortalObjectsLayer(bool isInPortal)
+		private void ChangeInsidePortalObjectsLayer(bool isInPortal)
 		{
 			foreach (var portalObject in insidePortalObjects)
 			{

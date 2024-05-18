@@ -8,15 +8,13 @@ namespace Azirel
 	[RequireComponent(typeof(ARRaycastManager))]
 	public class PlaceOnPlane : MonoBehaviour
 	{
-		[SerializeField]
-		[Tooltip("Instantiates this prefab on a plane at the touch location.")]
-		private GameObject portalGO;
+		[SerializeField] private GameObject portalGO;
 		private ARRaycastManager raycastManager;
 		private List<ARRaycastHit> hits = new();
 
 		protected void Awake() => raycastManager = GetComponent<ARRaycastManager>();
 
-		protected bool TryGetTouchPosition(out Vector2 touchPosition)
+		private bool TryGetTouchPosition(out Vector2 touchPosition)
 		{
 			if (Input.touchCount > 0)
 			{
@@ -28,14 +26,13 @@ namespace Azirel
 			return false;
 		}
 
-		protected void Update()
+		private void Update()
 		{
 			if (!TryGetTouchPosition(out var touchPosition))
 				return;
 
 			if (raycastManager.Raycast(touchPosition, hits, TrackableType.PlaneWithinPolygon))
 			{
-				Debug.Log("Touch screen");
 				var hitPose = hits[0].pose;
 				portalGO.SetActive(true);
 				portalGO.transform.SetPositionAndRotation(hitPose.position, hitPose.rotation);
