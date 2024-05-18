@@ -1,6 +1,6 @@
 ﻿// (c) 2020 Tongzhou Yu
 
-Shader "LyceumVR/PortalDoor"
+Shader "Azirel/PortalDoor"
 {
 	SubShader
 	{

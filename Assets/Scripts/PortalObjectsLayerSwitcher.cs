@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.LyceumVR.ARPortals_URP.Scripts
+namespace Azirel
 {
 	public class PortalObjectsLayerSwitcher : MonoBehaviour
 	{

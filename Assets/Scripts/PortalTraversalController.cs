@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Assets.LyceumVR.ARPortals_URP.Scripts
+namespace Azirel
 {
 	public class PortalTraversalController : MonoBehaviour
 	{
