@@ -6,9 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Main.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
+    AR Foundation RemoteARFoundationRemoteLoaderSettings: {fileID: 11400000, guid: e9594d507ea1c674cbfc741c0a56a83f,
+      type: 2}
     Niantic.Lightship.AR.LightshipSettings: {fileID: 11400000, guid: baf6bb49cdc12fb4eaa4fe29b5a40ec2,
       type: 2}
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 89d8e7bf2190746478221c08aab1d09a,
